@@ -81,8 +81,7 @@ The connector requires the following configuration parameters:
 -   **Request Comment**: Comment to be added to entitlement requests
 -   **Make Source Entitlements Requestable**: Option to make entitlements requestable if not already
 
-![Configuration Example](assets/Configuration%20example.jpg)
-
+![Configuration Example](assets/images/Configuration%20example.jpg)
 _Figure 1: Example configuration setup for the Proxy Entitlements connector_
 
 ## Development
