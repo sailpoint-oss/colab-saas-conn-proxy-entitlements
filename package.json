@@ -1,0 +1,34 @@
+{
+  "name": "proxy-entitlements",
+  "version": "0.1.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "shx rm -rf ./dist",
+    "prebuild": "npm run clean",
+    "build": "npx ncc build ./src/index.ts -o ./dist -m -C",
+    "dev": "cross-env NODE_OPTIONS=--enable-source-maps spcx run dist/index.js",
+    "debug": "spcx run dist/index.js",
+    "prettier": "npx prettier --write .",
+    "prepack-zip": "npm ci && npm run build",
+    "pack-zip": "spcx package"
+  },
+  "private": true,
+  "dependencies": {
+    "@sailpoint/connector-sdk": "1.1.24",
+    "sailpoint-api-client": "^1.6.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0",
+    "prettier": "^2.3.2",
+    "shx": "^0.3.3",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.2.0"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true
+}
+}
