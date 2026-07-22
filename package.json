@@ -1,6 +1,6 @@
 {
   "name": "proxy-entitlements",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "scripts": {
     "clean": "shx rm -rf ./dist",
@@ -28,25 +28,29 @@
     "ts-jest": "^29.4.6",
     "@types/jest": "^30.0.0"
   },
-    "jest": {
-        "preset": "ts-jest",
-        "testEnvironment": "node",
-        "clearMocks": true,
-        "collectCoverage": true,
-        "coverageThreshold": {
-            "global": {
-                "statements": 60,
-                "branches": 50,
-                "functions": 40,
-                "lines": 60
-            }
-        }
-    },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "clearMocks": true,
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "statements": 60,
+        "branches": 50,
+        "functions": 40,
+        "lines": 60
+      }
+    }
+  },
   "prettier": {
     "printWidth": 120,
     "trailingComma": "es5",
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true
-}
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true,
+    "unrs-resolver@1.11.1": true
+  }
 }

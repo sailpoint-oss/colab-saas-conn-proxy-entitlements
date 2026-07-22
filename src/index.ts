@@ -81,7 +81,7 @@ export const connector = async () => {
     const stdAccountCreate: StdAccountCreateHandler = async (context, input, res) => {
         logger.info('Starting account creation')
         logger.info({ input })
-        const name = input.attributes.name as string
+        const name = input.identity as string
         const entitlements = [input.attributes.entitlements].flat()
         logger.info('Account creation parameters', { name, entitlements })
 
